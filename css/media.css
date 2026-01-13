@@ -1,0 +1,169 @@
+
+/* Мониторы поменьше (до 1600px) */
+@media (max-width: 1800px) {
+    .main__title { font-size: 170px;}
+    .promo__decor-img--center { width: 25%;left: 44.4%;}
+    .promo__decor-img--clock {width: 875px;height: 875px;}
+
+}
+
+
+/* Мониторы поменьше (до 1600px) */
+@media (max-width: 1600px) {
+    .promo__decor-img--tl-header { width: 354px; height: 30px;top: 7%;left: -6%;object-fit: contain;}
+    .main__content {  right: 13.5%; top: -125px;}
+
+    .promo__square--1 {  left: 3.2%;}
+
+    .main__title { font-size: 150px; }
+    .main__subtitle { font-size: 40px; }
+    .promo__decor-img--clock { width: 800px; height: 800px; left: 2%; }
+    .promo__decor-elips--tr { width: 700px; height: 700px; border-width: 120px; }
+
+    .promo__decor-elips--bl { bottom: -40; left: -15.7%;}
+    
+}
+
+/* Ноутбуки (до 1366px) */
+@media (max-width: 1366px) {
+
+    .header { padding: 0 2.2% 0 2.2%}
+    .promo__decor-img--center { width: 25%;left: 38%; }
+
+    .promo__decor-img--tl-header {display: none;}
+
+
+    .promo__square--1 {top: 20%;left: 2.2%;}
+    .promo__square--2 { top: 36%; right: 12%;}
+
+    .main__title { font-size: 130px; }
+    .main__subtitle { font-size: 32px; }
+    .main__content { right: 9%; top: -100px; }
+    
+    .promo__decor-img--clock { width: 650px; height: 650px; top: 170px; }
+    .promo__decor-elips--tr { width: 550px; height: 550px; border-width: 90px;  right: -19%; top: -25%; }
+    .promo__decor-elips--bl { width: 450px; height: 450px; border-width: 70px; bottom: -20%; }
+    
+    .header__link { font-size: 20px; }
+    .footer__soc-link, .footer__soc-link img { width: 56px; height: 56px; }
+}
+
+/*  Планшеты (до 1024px) - ВКЛЮЧАЕМ БУРГЕР */
+@media (max-width: 1024px) {
+    /* Показываем бургер */
+    .header__burger {
+        display: block;
+    }
+
+    /* Меню выезжает сверху или сбоку */
+    .header__list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(13, 13, 13, 0.98); /* Почти черный фон */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        
+    
+        transform: translateY(-100%); 
+        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+        z-index: 100;
+    }
+
+    /* Общий стиль для трех полосок */
+.header__burger span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Позиции полосок в закрытом состоянии */
+.header__burger span:nth-child(1) { top: 0; }
+.header__burger span:nth-child(2) { top: 13px; }
+.header__burger span:nth-child(3) { top: 26px; }
+
+/* --- ТРАНСФОРМАЦИЯ В КРЕСТИК (когда есть класс .active) --- */
+
+.header__burger.active span:nth-child(1) {
+    top: 13px;
+    transform: rotate(45deg);
+}
+
+.header__burger.active span:nth-child(2) {
+    opacity: 0; /* Средняя полоска исчезает */
+    transform: translateX(-20px);
+}
+
+.header__burger.active span:nth-child(3) {
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+
+    /* Когда меню активно — выезжает */
+  .header__list.active {transform: translateY(0); visibility: visible; }
+
+    /* Ссылки внутри меню */
+    .header__link {font-size: 32px;text-align: center;}
+    
+
+    .main__content { position: relative; right: 0; top: 10%; text-align: center; }
+    .main { justify-content: center; }
+    .promo__decor-img--clock { width: 400px; height: 400px; left: 50%;transform: translateX(-50%);top: 5%; }
+    .promo__square { display: none; }
+    .promo__decor-img--center{display: none;}
+    .promo__decor-img--bl-footer{display: none;}
+    .promo__decor-elips--tr {width: 450px;height: 450px;border-width: 90px;right: -30%;top: 25%; }
+}
+
+/*  Мобильные (до 768px) */
+@media (max-width: 768px) {
+    .header { padding: 0 2%;}
+
+    .promo { height: 100vh; min-height: 600px; }
+    .promo__wrapper { padding: 40px 20px; }
+    
+    .main__title { font-size: 80px; }
+    .main__subtitle { font-size: 20px; margin-left: 0; }
+    
+    .promo__decor-elips--tr {width: 300px;height: 300px;border-width: 50px;right: -30%;top: 30%;}
+    .promo__decor-elips--bl { width: 300px; height: 300px; border-width: 50px; bottom: -15%; }
+    .promo__decor-img--center { width: 300px; left: 50%; transform: translateX(-50%); }
+    
+    .footer__socials { gap: 15px; }
+    .footer { justify-content: center; padding: 0; margin-bottom: 20px; }
+    .promo__decor-img--clock {width: 350px;height: 350px;left: 50%;transform: translateX(-50%);top: 10%;}
+}
+
+@media (max-width: 576px) {
+    .promo__decor-elips--tr {width: 250px;height: 250px;border-width: 50px;right: -15.7%;top: unset; bottom: -9%; }
+    .promo__decor-elips--bl { width: 250px; height: 250px; border-width: 50px; bottom: -9%; }
+    .header__link {font-size: 24px;}
+}
+
+/*  (до 480px) */
+@media (max-width: 480px) {
+    .main__title { font-size: 60px; }
+    .main__subtitle { font-size: 18px; }
+    .promo__decor-img--clock { width: 300px;height: 300px;top: 20%;}
+    .main__content {position: relative;right: 0;top: 60%;text-align: center; }
+    .promo__decor-elips--bl,.promo__decor-elips--tr{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+@media (max-width: 370px) {
+    .main__title { font-size: 48px; }
+    .main__subtitle { font-size: 14px; }
+    .promo__decor-img--clock { width: 300px;height: 300px;top: 20%;}.main__content {position: relative;right: 0;top: 60%;text-align: center; }
+}

@@ -1,0 +1,62 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5.2% 0 14.6%;
+}
+
+.header__list {
+    display: flex;
+    list-style: none;
+    gap: 34px;
+}
+
+.header__link {
+    font-family: Geometria;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 2%;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__link:hover { opacity: 0.6; }
+
+.header__more {
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+    transition: transform 2s linear;
+}
+
+.header__more:hover { transform: rotate(360deg); }
+
+.header__dot {
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+
+
+/* Кнопка бургера  */
+.header__burger {
+    display: none; /* Скрыт на десктопе */
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101; /* Выше, чем само меню */
+}
+
+ /* Временная заморозка всех переходов */
+    .resize-animation-stopper * {
+        transition: none !important;
+        animation: none !important;
+    }

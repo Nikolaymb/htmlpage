@@ -1,0 +1,51 @@
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5.2%;
+    margin-bottom: -18px;
+}
+
+.footer__socials {
+    display: flex;
+    gap: 32px;
+}
+
+.footer__soc-link {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+
+.footer__soc-link img {
+    width: 72px;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+
+.footer__soc-link:hover {
+    transform: scale(1.1); /* увеличиваем круг */
+}
+
+/* Универсальный способ менять картинку на hover */
+.footer__soc-link--facebook:hover img {
+    content: url('/img/social/facebook-active.svg');
+}
+
+.footer__soc-link--instagram:hover img {
+    content: url('/img/social/instagram-active.svg');
+}
+
+.footer__soc-link--linkedin:hover img {
+    content: url('/img/social/linkedin-active.svg');
+}
+
+.footer__soc-link--tg:hover img {
+    content: url('/img/social/tg-active.svg');
+}
